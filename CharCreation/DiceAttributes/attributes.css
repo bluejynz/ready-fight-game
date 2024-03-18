@@ -1,0 +1,63 @@
+.dice-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.die {
+    width: 80px;
+    height: 80px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ddd;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0px 0px 20px #0002;
+    padding: 14px;
+    animation: spin ease 2s 1;
+}
+
+.minor-die {
+    background-color: #f88;
+    border: 1px solid #f88;
+}
+
+.minor-die .dot {
+    border: 1px solid #faa;
+    box-shadow: inset 0px 0px 6px #f99;
+}
+
+.column {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.column.center-column {
+    justify-content: center;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    background-color: #000;
+    border-radius: 100%;
+    border: 1px solid #ddd;
+    box-shadow: inset 0px 0px 6px #aaa;
+}
+
+.dot.hidden {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(360deg) scale(.75);
+    }
+    100% {
+        transform: rotate() scale();
+    }
+}

@@ -18,8 +18,8 @@ function createCharacter() {
         habilidades: classes[charClass].habilidades,
     };
 
-    console.log('Lutador criado:', newCharacter);
     saveCharacter(newCharacter);
+    alert('Lutador criado');
 }
 
 // Função para voltar para a página inicial
