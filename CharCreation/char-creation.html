@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./char-creation.css">
+    <title>Character Creation</title>
+</head>
+<body>
+
+    <div id="character-creation">
+        <label for="char-name">Nome do Lutador:</label>
+        <input type="text" id="char-name" placeholder="Digite o nome do seu lutador">
+    
+        <label for="char-class">Classe:</label>
+        <select id="char-class">
+            <option value="guerreiro">Guerreiro</option>
+            <option value="mago">Mago</option>
+            <option value="arqueiro">Arqueiro</option>
+        </select>
+    
+        <button onclick="createCharacter()">Criar Lutador</button>
+        <button onclick="goBack()">Voltar</button>
+    </div>
+
+    <script src="./char-module.js"></script>
+    <script src="./char-creation.js"></script>
+</body>
+</html>

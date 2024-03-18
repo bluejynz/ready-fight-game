@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fighting.css">
+    <title>Ready? Fight!</title>
+</head>
+<body> 
+    <div id="game-container">
+        <div id="game-output">
+            <!-- Área de exibição do texto do jogo -->
+        </div>
+        <div id="game-actions">
+            <button onclick="attackEnemy()">Atacar</button>
+            <button onclick="">Defender</button>
+            <button onclick="">Curar</button>
+        </div>
+        <div id="player-info">
+            <div id="char-info"></div>
+            <div id="info-separator"></div>
+            <div id="enemy-info"></div>
+        </div>
+        <button onclick="goBack()">Voltar</button>
+    </div>
+    
+    <script src="../CharCreation/char-module.js"></script>
+    <script src="./fighting.js"></script>
+</body>
+</html>
