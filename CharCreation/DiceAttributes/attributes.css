@@ -1,13 +1,45 @@
-.dice-container {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    max-width: 600px;
+    margin: 50px 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#roll-dice {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#roll-dice:hover {
+    background-color: #0056b3;
+}
+
+#dice-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .die {
     width: 80px;
     height: 80px;
-    margin: 50px auto;
+    margin: 20px auto;
     display: flex;
     justify-content: space-between;
     background-color: #ddd;
@@ -55,7 +87,7 @@
 
 @keyframes spin {
     0% {
-        transform: rotate(360deg) scale(.75);
+        transform: rotate(360deg) scale(0.75);
     }
     100% {
         transform: rotate() scale();
