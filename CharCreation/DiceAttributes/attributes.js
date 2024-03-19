@@ -94,8 +94,31 @@ const dice = {
 function roll(btn) {
     btn.remove();
     let rngRolls = rollDice(6, 6);
-    console.log("DiceRoll", rngRolls);
     createDiceElements(rngRolls);
+}
+
+function createDiceElements(rngRolls) {
+    let diceContainer = document.getElementById("dice-container");
+    let h2Info = document.createElement("h2");
+    h2Info.textContent = "Suas rolagens foram:";
+    diceContainer.before(h2Info);
+    let minorIndex = getIndexOfMinorValue(rngRolls);
+    rngRolls.forEach(r => {
+        diceContainer.innerHTML += dice[r];
+    });
+    let minorDieElement = diceContainer.children[minorIndex];
+    minorDieElement.classList.add("minor-die");
+    createAttributesAllocationElements();
+}
+
+function createAttributesAllocationElements() {
+    // TODO:
+    // criar mais um main-container no html escondido
+    // ao chamar essa função mostrar o container
+    // colocar todos os atributos
+    // ao lado um select com os valores rolados pelos dados
+    // quando selecionar um, esse mesmo não pode ser selecionado em outro
+    // fazer os atributos baseados em d&d 5e
 }
 
 function rollDice(size, qty) {
@@ -104,17 +127,6 @@ function rollDice(size, qty) {
         rngRolls.push(randomIntFromInterval(1, size));
     }
     return rngRolls;
-}
-
-function createDiceElements(rngRolls) {
-    let diceContainer = document.getElementById("dice-container");
-    let minorIndex = getIndexOfMinorValue(rngRolls);
-    rngRolls.forEach(r => {
-        diceContainer.innerHTML += dice[r];
-    });
-    let minorDieElement = diceContainer.children[minorIndex];
-    minorDieElement.classList.add("minor-die");
-    console.log("Minor die element", minorDieElement);
 }
 
 function getIndexOfMinorValue(arr) {
@@ -138,6 +150,3 @@ function getIndexOfMinorValue(arr) {
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
-// criados cada um usando rng de 1 a 6
-// o valor menor será desativado e inutilizado (minor-dice)

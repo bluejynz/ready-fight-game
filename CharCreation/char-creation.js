@@ -19,7 +19,8 @@ function createCharacter() {
     };
 
     saveCharacter(newCharacter);
-    alert('Lutador criado');
+    alert('Informações salvas. Agora vamos distribuir os pontos aos atributos.');
+    window.location.href = 'diceattributes/attributes.html';
 }
 
 // Função para voltar para a página inicial
