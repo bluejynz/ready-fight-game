@@ -1,9 +1,15 @@
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
@@ -18,6 +24,7 @@ body {
 }
 
 #roll-dice {
+    margin: 10px auto;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 5px;
@@ -85,6 +92,14 @@ body {
     background-color: transparent;
     box-shadow: none;
     border: none;
+}
+
+#allocation-container {
+
+}
+
+#allocation-container.hidden {
+    display: none;
 }
 
 @keyframes spin {
